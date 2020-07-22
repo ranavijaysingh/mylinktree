@@ -1,0 +1,198 @@
+.login
+{
+	background:rgb(57, 224, 155);
+	height: 32px;
+    color: rgb(38, 50, 56);
+    padding: 0px calc(16px);
+    border-radius: calc(8px);
+    font-weight: bold;
+    font-size: 14px;
+}
+.header
+{
+	margin-bottom: 100px;
+}
+.header h1
+{
+	line-height: 1.13;
+    letter-spacing: calc(-1.28px);
+    font-weight: normal;
+    font-size: 58px;
+    text-align: center;
+    padding-top: 140px;
+}
+.header h3
+{
+	color: rgb(38, 50, 56);
+    font-size: 24px;
+    line-height: 2.5;
+    letter-spacing: calc(-0.48px);
+    font-weight: normal;
+    text-align: center;
+}
+.header .buttons
+{	
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	-webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+}
+.header .b1
+{
+	color: rgb(255, 255, 255);
+    padding: 20px calc(32px);
+    border-radius: calc(16px);
+    
+    cursor: pointer;
+    background: rgb(117, 81, 233);
+}
+.header .b1:hover
+{	text-decoration: none;
+	background: rgb(110, 89, 181);
+}
+.header .b2
+{
+	color: rgb(19, 20, 21);
+	margin-top: 20px;
+	margin-bottom: 100px;	
+}
+.mobile
+{	margin: 0 auto;
+    width: 310px;
+    height: 640px;
+    background: #00c3ff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #00c3ff 60%, #ffff1c);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #00c3ff 45%, #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 10px solid black;
+    border-radius: 45px;
+}
+.mobile .circle
+{
+	background: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+	margin: 20px auto;
+}
+.mobile .rectangle
+{
+    background: #fff;
+    height: 46px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 250px;
+}
+.icons-notusable
+{   
+	color: white;
+    font-size: 21px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+.line
+{
+	display: block;
+    width: 0px;/*
+    border-top-style: initial;
+    border-right-style: initial;
+    border-bottom-style: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;*/
+    border-width: 0px 0px 0px 2px;
+    border-image: initial;
+    margin: 0px auto;
+    border-left: 2px dashed rgb(117, 81, 233);
+    height: 100px;
+    margin-top: 0px;
+}
+.inputs
+{
+    border: 0.5px solid rgb(117, 81, 233);
+    border-radius: 50px;
+    padding: 15px;
+    margin: 0 auto;
+    width: 450px;
+    font-size: 20px;
+}
+.inputs img
+{
+	width: 30px;
+	height: 30px;
+}
+
+.inputs label
+{
+	margin-left: 30px;
+}
+.inputs input
+{
+	border: none;
+	outline: none;
+	
+}
+.content
+{
+	margin-bottom: 100px;
+}
+video
+{    width: 450px;
+    height: 550px;
+}
+.content .texting
+{
+	top:200px;
+	font-weight: normal;
+}
+.content .texting h2
+{
+	letter-spacing: 1.1;
+}
+.content .texting p
+{
+	line-height: 1.2;
+}
+
+.features
+{
+	margin-bottom: 100px; 
+}
+
+.features img
+{width: 256px;
+    height: 238px;
+}
+.features-texting 
+{
+	width: 250px;
+	text-align: center;
+}
+.features h3
+{
+	padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.features-button
+{
+	text-align: center;
+	margin-top: 60px;
+	
+}
+.features a
+{
+	color: rgb(117, 81, 233);
+    padding: 10px calc(24px);
+    border-radius: calc(12px);
+   border: 0.5px solid rgb(117, 81, 233);
+}
+.features a:hover
+{
+	text-decoration: none;
+	background: rgb(117,81,233);
+	color: #fff;
+}

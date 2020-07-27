@@ -1,0 +1,13 @@
+<%- include("partials/header")%>
+<link rel="stylesheet" type="text/css" href="finalsite.css"> 
+    <title>linktree</title>   
+</head>
+    <body>
+        
+        <%linklist.forEach(function(link){%>
+                <a href="<%=link.url%>" class="btn btn-outline-light btn-block"target="_blank"><%=link.title%></a>
+                
+        <%})%>
+    
+        
+<%- include("partials/footer")%>

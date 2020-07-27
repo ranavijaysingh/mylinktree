@@ -1,0 +1,26 @@
+<%- include("partials/header")%>
+<link rel="stylesheet" type="text/css" href="authent.css">
+<title>Register</title>
+</head>
+<body>
+
+<div class="container"> <!-- opening page div -->
+    	<h2><img src="images/logo.png">Linktree</h2>
+    	<h3>Sign up for your Linktree account</h3>
+    	<div class="form-container"> <!-- opening form-container div -->
+    		<form action="/register"method="POST">
+    		<input type="email" name="email"placeholder="Email">
+    		<br>
+    		<input type="text" name="username"placeholder="Username"value="<%=username%>"><br>
+    		<input type="password" name="password"placeholder="Password"><br>
+    		<input type="password" name="password2"placeholder="Repeat password"><br>
+    		<button type="submit"class="btn btn-primary btn-block">Register</button>
+    	</form>
+	
+    	</div> <!-- closing form-container div -->
+    	
+    	<p class="disclaimer">By using this service you are agreeing to the terms of service and privacy policy</p>
+    	<p>Already have an account?</p>
+
+    </div> <!-- closing page div -->
+	 <%-include("partials/footer")%>

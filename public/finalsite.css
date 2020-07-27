@@ -1,0 +1,22 @@
+body
+{   
+    background: #00c3ff;  /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to bottom, #00c3ff , #ffff1c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00c3ff , #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    
+}
+
+.linkbox a
+{
+    color: white;
+}
+.btn-block
+{
+    width: 50%;
+    margin: 30px auto;
+}

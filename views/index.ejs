@@ -1,0 +1,180 @@
+<%- include("partials/header")%>
+    <link rel="stylesheet" href="styles.css">
+    <title>1 link 4 all</title>
+  </head>
+  <body>
+    <div class="" > <!-- opening nav div -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+
+      <a class="navbar-brand" href="#"><img src="images/logo.png"class="logo-image nav-logo-image">linktree</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <!--  <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+      </li>
+       <li class="nav-item fsx">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+   
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    
+      <a class="my-2 my-sm-0 login" href="/register"type="submit">SIGN UP FREE </a>
+    </form>
+    </div>
+  </nav>
+  </div><!-- closing nav div -->
+  
+
+  <div class="container header"> <!-- opening header div -->
+    <h1>
+      The Only Link You 'll Ever Need
+    </h1>
+    <h3>
+      Connect audiences to all of your content with just one link
+    </h3>
+    <div class="buttons">
+      <a href="/register" class="b1">GET STARTED FOR FREE</a>  
+      <a href="/login" class="b2">Already registry?Login</a>
+    </div>
+    <div class="mobile"> <!-- opening mobile div -->
+      <div class="circle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      
+      <div class="icons-notusable"><!-- opening icons-notusable div -->
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-spotify"></i>
+      </div> <!-- closing icons-notusable div -->
+    </div> <!-- closing mobile div -->
+    <div class="line-inputs"> <!-- opening line-input div -->
+      <div class="line"> <!-- opening line div --> 
+      </div> <!-- closing line div -->
+      <div class="inputs"> <!-- opening input div -->
+      <!--   <input type="text" value="linktree/"placeholder="Your Name">-->
+        <form action="/registeruser" method="POST">
+          <img src="images/logo.png" id="logo-image">
+          <label>linktree/</label>
+          <input type="text" name="username" placeholder="Your Name">
+          <button type="submit"></button>
+        </form>
+      </div> <!-- closing input div -->
+    </div>
+    </div> <!-- Closing header div -->
+
+
+  <div class="container content"> <!-- opening content div -->
+    <div class="row"> <!-- opening row1 div -->
+      <div class="col-sm"> <!-- opening row1 col1 div -->
+        <!-- <img src="images/seq_1.png"> -->
+        <video class key="videos/link_to_anywhere.mp4" playinline autoplay muted loop>
+         <source src="videos/link_to_anywhere.mp4"> 
+        </video>
+      </div> <!-- closing row1 col1 div -->
+      <div class="col-sm texting"> <!-- opening row1 col2 div -->
+        <h2>Use it anywhere</h2>
+        <p>
+          Take your Linktree wherever your audience is, to help them to discover all your important content.
+        </p>
+      </div> <!-- closing row1 col2 div -->
+    </div> <!-- closing row1 div -->
+
+    <div class="row"> <!-- opening row2 div -->
+      <div class="col-sm texting"> <!-- opening row2 col1 div -->
+        <h2>Link to everywhere</h2>
+        <p>
+          Linktree is the launchpad to your latest video, article, recipe, tour, store, website, social post - everywhere you are online.
+        </p>
+      </div> <!-- closing row2 col1 div -->
+      <div class="col-sm"> <!-- opening row2 col2 div -->
+        <!-- <img src="images/link-everywhere_1.PNG"> -->
+        <video class key="videos/link_destinations.mp4" playsinline autoplay muted loop>
+          <source src="videos/link_destinations.mp4">
+        </video>
+      </div> <!-- closing row2 col2 div -->
+    </div><!--  closing row2 div -->
+
+    <div class="row"> <!-- opening row3 div -->
+      <div class="col-sm"> <!-- opening row3 col1 div -->
+        <!-- <img src="images/easily-managed_1.PNG"> -->
+        <video class key="videos/easily_managed.mp4" playsinline autoplay muted loop>
+          <source src="videos/easily_managed.mp4">
+        </video>
+      </div> <!-- closing row3 col1 div -->
+      <div class="col-sm texting"> <!-- opening row3 col2 div -->
+        <h2>Easily managed</h2>
+        <p>Creating a Linktree takes seconds. Use our simple drag-and-drop editor to effortlessly manage your content.</p>
+      </div> <!-- closing row3 col2 div -->
+    </div>  <!-- closing row3 div -->
+        <!--     <div class="row">
+          <div class="col-sm-8">col-sm-8</div>
+          <div class="col-sm-4">col-sm-4</div>
+        </div>
+         --><!-- <div class="row">
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
+          </div -->
+  </div> <!-- closing content div -->
+
+
+  <div class="container features"> <!-- opening features div -->
+    <div class="row"><!--  opening row1 div -->
+      <div class="col"> <!-- opening row1 col1 div -->
+        <img src="images/linktree-features-customization.png">
+        <div class="features-texting"> <!-- opening features-texting div -->
+          <h3>
+          Customize your Linktree
+          </h3>
+          <p>Make your Linktree pop. Embody your brand through custom colors, fonts and images.</p>
+        
+        </div> <!-- closing features-texting div -->
+        </div> <!-- closing row1 col1 div -->
+      <div class="col"> <!-- opening row1 col2 div -->
+        <img src="images/linktree-features-analytics.png">
+        <div class="features-texting"> <!-- opening features-texting div -->
+          <h3>Analytics and Insights</h3>
+        <p>Gain valuable insight into your traffic and discover which content is performing with your audience.</p>  
+        </div><!--  closing features-texting div -->
+        </div><!-- closing row1 col2 div -->
+      <div class="col"> <!-- opening row1 col3 div -->
+        <img src="images/linktree-features-integrations.png">
+        <div class="features-texting"> <!-- opening features-texting div -->
+          <h3>Powerful Third-Party Integrations</h3>
+        <p>Collect email subscribers, connect with third-party analytics and remarket to your audience.</p>  
+        </div> <!-- closing features-texting div -->
+        
+      </div> <!-- closing row1 col3 div -->
+    </div><!-- closing row1 div -->
+    <div class="features-button">
+      <a href="/register">SEE ALL FEATURES</a>
+    </div>
+    
+  </div> <!--closing feautres div-->
+
+  	<div class="container footer"><!--opening footer div-->
+  		<hr>
+  		<img src="images/logo.png" class="logo-image nav-logo-image">
+  		<!-- <p>linktree</p> -->
+  		<div class="icons-usable">
+  			<i class="fab fa-twitter"></i>
+  			<i class="fab fa-instagram"></i>
+        	<i class="fab fa-facebook-square"></i>
+  		</div>
+  		
+  	</div><!--closing footer div-->
+    <%-include("partials/footer")%>

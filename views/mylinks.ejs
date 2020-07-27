@@ -1,0 +1,88 @@
+<%- include("partials/header")%>
+<link rel="stylesheet" type="text/css" href="mylinks.css">
+    <title>MyLinks</title>
+  </head>
+  <body>
+    <div class="row no-gutters"> <!-- opening row1 div -->
+        <div class="col-8 colheight"> <!-- opening row1 col1 div -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light"><!-- opening navbar nav -->
+          <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Links <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">Appearance</a>
+            </div>
+          </div>
+        </nav> <!-- closing navbar nav -->
+        <nav class="navbar navbar-light bg-light">
+    <p>Views: </p>
+</nav>
+    <div class="container"><!-- opening links div -->
+       <!-- btn btn-block -->
+      <!-- <form>
+        <button type="button"class="addlinkbutton">Block level button</button>
+      </form> -->
+
+      <ul>
+        
+        <button type="button"class="addlinkbutton btn mb-5 mt-5 btn-block" id="col1-button"onclick="myfunction()">Add New Link</button>
+        
+        <form class="addlinkform mb-5 p-5"style="display: none" action="/mylinks"method="POST">
+          <input type="text" class="mb-2" name="title"placeholder="Enter title">
+          <input type="text" name="url"placeholder="http://url">
+          <button type="submit">submit</button>
+        </form>
+        <%linklist.forEach(function(link){%>
+          <li class="shadow-sm p-5  mb-5 bg-white rounded">
+            <div class="list-firstline"> <!-- opening list-firstline -->
+          <!--   <form class="sign-up-form">
+              <input type="checkbox">
+            </form> -->
+            <h5><%=link.title%></h5>
+            </div> <!-- closing list-firstline -->
+            <p><%=link.url%></p>
+            
+          </li>
+        <%})%>
+        
+        <!-- <li class="shadow-sm mb-5  p-5 bg-white rounded">
+          <h5>My Instagram</h5>
+          <p>https://www.instagram.com/people/Rana-Vijay-Singh/100005986994338</p>
+         </li>  
+        -->
+      </ul>  
+
+              
+    </div> <!-- closing links div -->
+       </div> <!-- closing row1 col1 div -->
+        <div class="col-4 column2"> <!-- opening row1 col2 div -->
+            <nav class="navbar navbar-light bg-light"> <!-- opening navbar nav -->
+              <div class="navbar-nav">
+                  <a class="nav-item nav-link" href="#">Mylinktree</a>
+              </div>  
+            </nav> <!-- closing navbar nav -->
+            
+            <div class="mobile"> <!-- opening mobile div -->
+              <div class="link-body">
+                <%linklist.forEach(function(link){%>
+                  <!-- <div class="link-mobile"> -->
+                    <a href="<%=link.url%>" class="btn btn-outline-light btn-block"target="_blank"><%=link.title%></a>
+                  <!-- </div>   -->
+                <%})%>
+              </div>
+              
+              
+            </div> <!-- closing mobile div -->
+        </div> <!-- closing row1 col2 div -->
+    </div>
+    <script type="text/javascript">
+      function myfunction()
+      { 
+        document.querySelector(".addlinkform").style.display="block";
+        console.log("working");
+      }
+    </script>
+    <%- include("partials/footer")%>

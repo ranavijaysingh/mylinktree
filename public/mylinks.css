@@ -1,0 +1,186 @@
+body
+{
+	background: #f5f6f8;
+}
+nav
+{
+    border-bottom: 1px solid rgb(215, 220, 225);
+    color: black;
+    font-size: 13px;
+}
+nav img
+{
+    width: 30px;
+    height: 30px;
+}
+.addlinkform
+{
+    background: white;
+    width: 600px;
+    margin:0 auto;
+}
+.addlinkform input
+{
+    display: block;
+    width: 80%;
+    outline: none;
+    border:none;
+    
+}
+#col1-button {
+	text-align: center;
+	float: center;
+	margin:0 auto;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 24px!important;
+    border-radius: 12px;
+    font-weight: 700;
+    width: 600px;
+    background: #7c41ff;
+    color: white;
+}
+
+/*.addlinkbutton
+{
+    outline: none;
+    border:none;
+    background: #7c41ff;
+    outline: none;
+    border: none;
+    background: #7c41ff;
+    width: 500px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    border-radius: 6px;
+}
+*/ul
+{
+    list-style-type:none;
+
+}
+li
+{   
+    background: white;
+    width: 600px;
+     margin: 0 auto;
+}
+
+li h5
+{
+    font-size: 13px;
+
+}
+li p
+{
+    font-size: 10px;
+   color: #3d444b;
+}
+.sign-up-form
+{
+    display: inline;
+}
+/* .sign-up-form input[type="checkbox"]
+{   position: relative;
+    float: right;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    width: 40px;
+    display: inline;
+    height: 22px;
+    background-color: white;
+    border:none;
+    outline:none;
+    border-radius: 25px;
+    
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+    transition: background-color 0.4s;
+} */
+.sign-up-form input:checked[type="checkbox"]
+{
+    background-color: blue;
+
+}
+.sign-up-form input[type="checkbox"]::before
+{   /*before=is a pseudo element used to
+     apply some property before an element*/
+    content:"";
+    width: 19px;
+    height: 20px;
+    position: absolute;
+    background-color: #aaa;
+    border-radius: 20px;
+    top: 1.2px;
+    right: 19.8px;
+    transition: left 0.3s;
+}
+
+.sign-up-form input:checked[type="checkbox"]::before
+{   /*checked= is an attribute of input 
+        argument.used when inputbox
+     is checked*/
+    right: 0;
+    top: 1.2px;
+}
+.colheight
+{   
+    height: 100vh;
+    border-right: 1px solid rgb(215, 220, 225);
+}
+.mobile
+{   margin: 60px auto;
+    width: 265px;
+    height: 530px;
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #00c3ff 60%, #ffff1c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00c3ff 45%, #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 10px solid black;
+    border-radius: 45px;
+    
+}
+.link-body
+{
+    margin-top: 85px;
+}
+
+/* .link-mobile
+{
+    border: 1.5px solid white;
+    color: white;
+    width: 88%;
+    padding: 5px 0;
+    font-size: 13px;
+    margin: 10px auto;
+} */
+/* .link-mobile p
+{
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    border: 1px solid white;
+} */
+.link-mobile a
+{
+    color: white;
+}
+.link-mobile p:hover
+{
+    background: white;
+      /* fallback for old browsers */
+}
+.link-mobile a:hover
+{
+    color: #00c3ff;
+    text-decoration: none;
+}
+.btn-outline-light
+{
+    width: 80%;
+    
+    margin: 10px auto;
+}

@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const md5 =require("md5");
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
@@ -31,20 +33,32 @@ app.get("/register",function(req,res){
 app.get("/login",function(req,res){
     res.render("login");
 });
-app.get("/mylinks",function(req,res){
-    res.render("mylinks",{linklist:linklist});
-});
+// app.get("/mylinks",function(req,res){
+//     res.render("mylinks",{linklist:linklist});
+// });
 app.get("/finalsite",function(req,res){
     res.render("finalsite",{linklist:linklist});
 });
+app.get("/logout",function(req,res){
+    // req.logout();
+    res.redirect("/");
+})
 app.post("/register",function(req,res){
     const user=new linktr({
         username:req.body.username,
-        password:req.body.password,
+        password:md5(req.body.password),
         email:req.body.email
     });
-    user.save();
-    console.log("saved data");
+    user.save(function(err){
+        if(!err){
+            res.render("mylinks",{linklist:linklist});
+        }
+        else
+        {
+            res.render(err);
+        }
+    });
+    // console.log("saved data");
     // const articletitle=req.body.titlepost;
     // const articlecontent=req.body.newcontent;
     // const newpost=new article({
@@ -54,6 +68,23 @@ app.post("/register",function(req,res){
     // newpost.save();
 });
 
+app.post("/login",function(req,res){
+    linktr.findOne({username:req.body.username},function(err,foundeduser){
+        if(err){
+            res.send(err)
+        }
+        else
+        {
+            if(foundeduser)
+            {
+                if(foundeduser.password==md5(req.body.password)){
+                    res.render("mylinks",{linklist:linklist});
+                }
+            }
+        }
+    });
+});
+
 app.post("/mylinks",function(req,res){
      var newobj={
          title:req.body.title,
@@ -61,7 +92,8 @@ app.post("/mylinks",function(req,res){
     }
     linklist.push(newobj);
     res.redirect("/mylinks");
-})
+});
+
 app.post("/registeruser",function(req,res){
      username=req.body.username;
     res.redirect("/register");

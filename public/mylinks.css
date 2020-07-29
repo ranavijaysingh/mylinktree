@@ -16,7 +16,7 @@ nav img
 .addlinkform
 {
     background: white;
-    width: 600px;
+    max-width: 600px;
     margin:0 auto;
 }
 .addlinkform input
@@ -36,7 +36,7 @@ nav img
     padding: 8px 24px!important;
     border-radius: 12px;
     font-weight: 700;
-    width: 600px;
+    max-width: 600px;
     background: #7c41ff;
     color: white;
 }
@@ -65,7 +65,7 @@ nav img
 li
 {   
     background: white;
-    width: 600px;
+    max-width: 600px;
      margin: 0 auto;
 }
 
@@ -133,8 +133,8 @@ li p
 }
 .mobile
 {   margin: 60px auto;
-    width: 265px;
-    height: 530px;
+    width: 240px;
+    height: 500px;
     background: #00c3ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #00c3ff 60%, #ffff1c);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #00c3ff 45%, #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -183,4 +183,8 @@ li p
     width: 80%;
     
     margin: 10px auto;
+}
+@media only screen and (max-width: 800px)
+{
+    
 }

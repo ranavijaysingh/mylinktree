@@ -23,11 +23,18 @@ app.use(passport.session());
 
 mongoose.connect("mongodb://localhost:27017/linktrDB",{useNewUrlParser:true,useUnifiedTopology: true})
 
-
+const urllistSchema = new mongoose.Schema({
+    title:String,
+    url:String,
+    });
+const urllist = mongoose.model("urllist",urllistSchema);
+const urlslistSchema = urllist.schema;
 const linktrSchema = new mongoose.Schema({
     email:String,
     username:String,
-    password:String
+    password:String,
+    urlslist:[urlslistSchema]
+ 
 });
 
 linktrSchema.plugin(passportLocalMongoose);
@@ -48,19 +55,23 @@ app.get("/",function(req,res)
 {
     res.render("index");
 });
+// ,{username:username}
 app.get("/register",function(req,res){
-    res.render("register",{username:username});
+    res.render("register");
 });
 app.get("/login",function(req,res){
     res.render("login");
 });
 app.get("/mylinks",function(req,res){
     if(req.isAuthenticated()){
-        res.render("mylinks",{linklist:linklist});
+         console.log(req.user.username);
+        //console.log(req);
+                res.render("mylinks",{linklist:linklist})
     }else{
         res.redirect("/login");
     }
 });
+
 app.get("/finalsite",function(req,res){
     res.render("finalsite",{linklist:linklist});
 });
@@ -127,16 +138,49 @@ app.post("/login",function(req,res){
 });
 
 app.post("/mylinks",function(req,res){
-     var newobj={
+     var newobj=new urllist({
          title:req.body.title,
-        url:req.body.url
-    }
-    linklist.push(newobj);
-    res.redirect("/mylinks");
+        url:req.body.url 
+    });
+    newobj.save(function(err,result){
+        if(err){
+            console.log(err);
+            res.send("err occured");
+        }
+        else
+        {
+            console.log("final res = "+ result);
+            linktr.findOneAndUpdate({_id:req.body.id},)            
+            // linktr.urlslist.push(result);
+            // linktr.save(done);
+        }
+    });
+    // linklist.push(newobj);
+    
+    
+    res.redirect("/mylinks")
+    // linktr.urlslist.push(newobj);
+    // linklist.push(newobj);
+    // var newobj = new urllist({
+    //     title: req.body.title,
+    //     url: req.body.url
+    // });
+    // newobj.save(function(err,result){
+    //     if(err)
+    //     {
+    //         console.log(err);
+    //         res.redirect("/");
+    //     }else
+    //     {
+    //         linktr.findOne({u})urllist.push(result);
+    //         res.redirect("/mylinks");
+
+    //     }
+    // });
 });
 
-app.post("/registeruser",function(req,res){
-     username=req.body.username;
-    res.redirect("/register");
-})
-app.listen(process.env.PORT||3000,()=>console.log("server started"));
+// app.post("/registeruser",function(req,res){
+//      username=req.body.username;
+//     res.redirect("/register");
+// })
+app.listen(process.env.PORT||3050,()=>console.log("server started"));

@@ -11,6 +11,8 @@
   top: 0;
   width: 100%;
     overflow: hidden;
+    z-index: 1;
+    background: white;
 }
 .login
 {
@@ -146,6 +148,17 @@
 	border: none;
 	outline: none;
 	
+}
+.registeruserform button
+{
+    outline: none;
+    border: none;
+    background: none;
+}
+.registeruserform button i
+{
+    font-size: 27px;
+    color: rgb(117, 81, 233);
 }
 .content
 {

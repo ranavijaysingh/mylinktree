@@ -67,12 +67,14 @@ var linklist = [
   { title: "mygoogle", url: "https://google.com" },
   { title: "myfacebook", url: "https://facebook.com" },
 ];
-app.get("/", function (req, res) {
-  res.render("index");
+app.get("/", function (req, res) 
+{ 
+  var logstatus=req.user;
+  res.render("index",{logstatus:logstatus});
 });
-// ,{username:username}
+
 app.get("/register", function (req, res) {
-  res.render("register");
+  res.render("register",{username:ns});
 });
 app.get("/login", function (req, res) {
   res.render("login");
@@ -97,20 +99,36 @@ app.get("/mylinks", function (req, res) {
     res.redirect("/login");
   }
 });
-
 app.get("/finalsite/:use", function (req, res) {
   linktr
-  .findOne({username:req.params.use})
-  .populate("urlslist")
-  .exec()
-  .then((resp) => {
-    //res.send("success");
-    console.log(resp.urlslist);
-    res.render("finalsite",{ linklist:resp.urlslist });
-  })
-  .catch((err) => {
-    console.log(err);});
+    .findOne({ username: req.params.use })
+    .populate("urlslist")
+    .exec()
+    .then((resp) => {
+      if (resp) {
+        //console.log(resp.urlslist);
+        return res.render("finalsite", { linklist: resp.urlslist });
+      } else {
+        return res.send("error");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
+// app.get("/finalsite/:use", function (req, res) {
+//   linktr
+//   .findOne({username:req.params.use})
+//   .populate("urlslist")
+//   .exec()
+//   .then((resp) => {
+//     //res.send("success");
+//     console.log(resp.urlslist);
+//     res.render("finalsite",{ linklist:resp.urlslist });
+//   })
+//   .catch((err) => {
+//     console.log(err);});
+// });
 //logout get route
 app.get("/logout", function (req, res) {
   req.logout();
@@ -178,7 +196,7 @@ app.post("/login", function (req, res) {
 });
 
 app.post("/mylinks", function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   var newobj = new urllist({
     title: req.body.title,
     url: req.body.url,
@@ -203,9 +221,9 @@ app.post("/mylinks", function (req, res) {
   });
   res.redirect("/mylinks");
 });
-
-// app.post("/registeruser",function(req,res){
-//      username=req.body.username;
-//     res.redirect("/register");
-// })
+var ns;
+app.post("/registeruser",function(req,res){
+     ns=req.body.username;
+    res.redirect("/register");
+});
 app.listen(process.env.PORT || 3050, () => console.log("server started"));

@@ -25,7 +25,7 @@ nav img
     width: 80%;
     outline: none;
     border:none;
-    
+
 }
 #col1-button {
 	text-align: center;
@@ -40,7 +40,19 @@ nav img
     background: #7c41ff;
     color: white;
 }
-
+.addlinkform button
+{
+    background: #7c41ff;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    padding: 3px 0;
+}
 /*.addlinkbutton
 {
     outline: none;
@@ -128,8 +140,12 @@ li p
 }
 .colheight
 {   
-    height: 100vh;
+    
     border-right: 1px solid rgb(215, 220, 225);
+    min-height: 100vh;
+}
+.column2 .navbar {
+    padding: 0.73rem 1rem;
 }
 .mobile
 {   margin: 60px auto;
@@ -144,26 +160,9 @@ li p
 }
 .link-body
 {
-    margin-top: 85px;
+    margin-top: 60px;
 }
 
-/* .link-mobile
-{
-    border: 1.5px solid white;
-    color: white;
-    width: 88%;
-    padding: 5px 0;
-    font-size: 13px;
-    margin: 10px auto;
-} */
-/* .link-mobile p
-{
-    color: white;
-    margin: 20px auto;
-    text-align: center;
-    width: 80%;
-    border: 1px solid white;
-} */
 .link-mobile a
 {
     color: white;
@@ -184,7 +183,48 @@ li p
     
     margin: 10px auto;
 }
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 849px)
 {
-    
+        
+    .mobile
+    {   margin: 60px auto;
+        width: 190px;
+        height: 440px;     
+    }
+    .btn-outline-light
+    {
+    margin: 7px auto;
+    font-size: 12px;
+    }   
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+    .column2 .navbar {
+        padding: 0.19rem 1rem;
+    }
+}
+@media only screen and (max-width:650px)
+{
+    .mobile
+    {   
+        width: 170px;
+        height: 400px;     
+    }
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 0.75rem;
+    }
+    .column2 .navbar {
+        padding: 0.22rem 1rem;
+    }
+}
+@media only screen and (max-width:576px)
+{   
+    .column2
+    {
+        display: none;
+    }
+    .mobile
+    {
+        display: none;
+    }
 }

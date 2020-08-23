@@ -6,7 +6,7 @@
     <div class="" > <!-- opening nav div -->
     <nav class="navbar navbar-expand-lg navbar-light ">
 
-      <a class="navbar-brand" href="#"><img src="images/logo.png"class="logo-image nav-logo-image">linktree</a>
+      <a class="navbar-brand" href="/"><img src="images/logo.png"class="logo-image nav-logo-image">linktree</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,7 +17,11 @@
         <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
+        <%if(logstatus){%>
+          <a class="nav-link"href="/logout">Logout</a>
+          <%}else{%>
+          <a class="nav-link" href="/login">Login</a>
+            <%}%>
       </li>
       <!--  <li class="nav-item">
         <a class="nav-link" href="#">Help</a>
@@ -27,10 +31,11 @@
       </li> -->
    
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-    
+      <%if(logstatus){%>
+      <a class="my-2 my-sm-0 login" href="/mylinks"type="submit"><i class="fas fa-user-circle"></i>ADMIN</a>  
+       <%}else{%> 
       <a class="my-2 my-sm-0 login" href="/register"type="submit">SIGN UP FREE </a>
-    </form>
+       <%}%>
     </div>
   </nav>
   </div><!-- closing nav div -->
@@ -66,11 +71,11 @@
       </div> <!-- closing line div -->
       <div class="inputs"> <!-- opening input div -->
       <!--   <input type="text" value="linktree/"placeholder="Your Name">-->
-        <form action="/registeruser" method="POST">
+        <form action="/registeruser" class="registeruserform"method="POST">
           <img src="images/logo.png" id="logo-image">
           <label>linktree/</label>
           <input type="text" name="username" placeholder="Your Name">
-          <button type="submit"></button>
+          <button type="submit"><i class="fas fa-arrow-circle-right"></i></button>
         </form>
       </div> <!-- closing input div -->
     </div>

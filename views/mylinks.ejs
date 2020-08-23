@@ -4,22 +4,22 @@
   </head>
   <body>
     <div class="row no-gutters"> <!-- opening row1 div -->
-        <div class="col-8 colheight"> <!-- opening row1 col1 div -->
+        <div class="col-sm-8 colheight"> <!-- opening row1 col1 div -->
           <nav class="navbar navbar-expand-lg navbar-light bg-light"><!-- opening navbar nav -->
-          <a class="navbar-brand" href="#"target="_blank"><img src="images/logo.png"></a>
+          <a class="navbar-brand" href="/"><img src="images/logo.png"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">Links <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="mylinks">Links <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="/logout">Logout</a>
             </div>
           </div>
         </nav> <!-- closing navbar nav -->
-        <nav class="navbar navbar-light bg-light">
-    <p>Views: </p>
-</nav>
+        <!-- <nav class="navbar navbar-light bg-light">
+          <p>Views: </p>
+        </nav> -->
     <div class="container"><!-- opening links div -->
        <!-- btn btn-block -->
       <!-- <form>
@@ -30,14 +30,14 @@
         
         <button type="button"class="addlinkbutton btn mb-5 mt-5 btn-block" id="col1-button"onclick="myfunction()">Add New Link</button>
         
-        <form class="addlinkform mb-5 p-5"style="display: none" action="/mylinks"method="POST">
+        <form class="addlinkform mb-3 p-3"style="display: none" action="/mylinks"method="POST">
           <!-- <input type="text" name="userid" placeholder="Enter username"> -->
-          <input type="text" class="mb-2" name="title"placeholder="Enter title">
-          <input type="text" name="url"placeholder="http://url">
+          <input type="text" class="mb-1" name="title"placeholder="Enter title">
+          <input type="text" name="url" class="mb-1"placeholder="http://url">
           <button type="submit">submit</button>
         </form>
         <%linklist.forEach(function(link){%>
-          <li class="shadow-sm p-5  mb-5 bg-white rounded">
+          <li class="shadow-sm p-3  mb-3 bg-white rounded">
             <div class="list-firstline"> <!-- opening list-firstline -->
           <!--   <form class="sign-up-form">
               <input type="checkbox">
@@ -59,10 +59,10 @@
               
     </div> <!-- closing links div -->
        </div> <!-- closing row1 col1 div -->
-        <div class="col-4 column2"> <!-- opening row1 col2 div -->
+        <div class="col-sm-4 column2"> <!-- opening row1 col2 div -->
             <nav class="navbar navbar-light bg-light"> <!-- opening navbar nav -->
               <div class="navbar-nav">
-                  <a class="nav-item nav-link" href="/finalsite/<%=use%>"target="_blank">Mylinktree</a>
+                  <a class="nav-item nav-link" href="/finalsite/<%=use%>"target="_blank">Mylinktree : localhost:3050/finalsite/<%=use%></a>
               </div>  
             </nav> <!-- closing navbar nav -->
             

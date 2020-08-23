@@ -1,12 +1,42 @@
 <%- include("partials/header")%>
-<link rel="stylesheet" type="text/css" href="finalsite.css"> 
-    <title>linktree</title>   
+<!-- <link rel="stylesheet" type="text/css" href="finalsite.css">  -->
+    <title>linktree</title>
+    <style>
+        body
+        {
+            color:black;
+            background:linear-gradient(to bottom, #00c3ff 45%, #ffff1c);
+            min-width: 100%;
+            min-height: 100vh;
+        }
+        a{
+            
+            color: black;
+        }
+        .item-list 
+        {
+            display: flex;
+    /* text-align: center; */
+            padding-top: 50px;
+    /* margin: 0 auto; */
+            
+            align-items: center;
+            flex-direction: column;
+        }
+        .btn-block {
+            
+            width: 50%;
+        }
+    </style>   
 </head>
     <body>
-        <%linklist.forEach(function(link){%>
+        <div class="item-list">
+            <%linklist.forEach(function(link){%>
                 <a href="<%=link.url%>" class="btn btn-outline-light btn-block"target="_blank"><%=link.title%></a>
                 
         <%})%>
     
+        </div>
+        
         
 <%- include("partials/footer")%>

@@ -69,6 +69,15 @@
     margin-bottom: 32px;
     color: #7e8287;
  }
+ .accountproblem
+ {	display: flex;
+	flex-direction: column;
+ 	font-size: 11px;
+    margin-top: 0;
+    margin-bottom: 32px;
+	color: #7e8287;
+	text-align: center;
+ }
 @media only screen and (max-width: 424px)
 {
     

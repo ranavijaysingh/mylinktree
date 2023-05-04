@@ -22,10 +22,12 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-mongoose.connect("mongodb://localhost:27017/linktrDB", {
+const oldMongoLink = "mongodb://localhost:27017/linktrDB"
+const newMongoLink = "mongodb+srv://our-first-user:muY2VV2o8x48lML3@ranavijaycluster.58sli.mongodb.net/tinderdb?retryWrites=true&w=majority"
+mongoose.connect(newMongoLink, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 const urllistSchema = new mongoose.Schema({
@@ -212,7 +214,6 @@ app.post("/mylinks", function (req, res) {
       linktr
         .findByIdAndUpdate(req.user._id, { $push: { urlslist: result._id } })
         .then((resp) => {
-          console.log(resp);
         })
         .catch((err) => {
           console.log(err);

@@ -157,7 +157,7 @@
 }
 .registeruserform button i
 {
-    font-size: 27px;
+    font-size: 23px;
     color: rgb(117, 81, 233);
 }
 .content
@@ -308,9 +308,20 @@ video
     {
         width: 100%;
     }
+
 }
 @media only screen and (max-width: 500px)
 {
+    #logo-image
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+    .registeruserform button i
+    {
+        font-size: 15px;
+    }
     .header h1 {
     font-size: 24px;
     }

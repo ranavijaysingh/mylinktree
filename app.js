@@ -55,7 +55,7 @@ const linktrSchema = new mongoose.Schema({
 linktrSchema.plugin(passportLocalMongoose);
 
 const linktr = mongoose.model("linktr", linktrSchema);
-const redirectUrl = process.env.PORT || 'localhost:3050';
+const redirectUrl = process.env.PORT ?'https://linktree-e4mq.onrender.com/' : 'localhost:3050';
 // passport.use(new LocalStrategy(linktr.authenticate()));
 passport.use(linktr.createStrategy());
 

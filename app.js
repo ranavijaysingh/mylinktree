@@ -55,7 +55,7 @@ const linktrSchema = new mongoose.Schema({
 linktrSchema.plugin(passportLocalMongoose);
 
 const linktr = mongoose.model("linktr", linktrSchema);
-
+const redirectUrl = process.env.PORT || 'localhost:3050';
 // passport.use(new LocalStrategy(linktr.authenticate()));
 passport.use(linktr.createStrategy());
 
@@ -90,7 +90,7 @@ app.get("/mylinks", function (req, res) {
       .populate("urlslist")
       .exec()
       .then((resp) => {
-        res.render("mylinks", { linklist: resp.urlslist,use:use });
+        res.render("mylinks", { linklist: resp.urlslist,use:use, redirectUrl: redirectUrl });
       })
       .catch((err) => {
         console.log(err);
